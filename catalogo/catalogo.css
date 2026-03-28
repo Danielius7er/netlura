@@ -15,6 +15,8 @@ body {
     background-color: var(--dark-bg);
     color: var(--text-color);
     overflow-x: hidden;
+    min-height: 100vh;
+    animation: pageEntrance 0.9s ease both;
 }
 
 a {
@@ -38,7 +40,11 @@ a:hover {
     padding: 0 4%;
     height: 70px;
     z-index: 1000;
-    background-color: var(--dark-bg);
+    background-color: rgba(20, 20, 20, 0.88);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    animation: navSlide 0.85s ease both;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
 .navbar-left,
@@ -103,6 +109,18 @@ a:hover {
     cursor: pointer;
 }
 
+.premium-badge {
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #e50914, #ff3f3f);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    box-shadow: 0 10px 30px rgba(229, 9, 20, 0.24);
+}
+
 .profile-icon {
     width: 32px;
     border-radius: 4px;
@@ -116,6 +134,7 @@ a:hover {
     position: relative;
     z-index: 3;
     padding-bottom: 100px;
+    animation: sectionReveal 0.8s ease both;
 }
 
 .slider-section {
@@ -183,6 +202,53 @@ a:hover {
     z-index: 1;
     transform-origin: center center;
     /* Default origin */
+    opacity: 0;
+    transform: translateY(16px);
+    animation: cardReveal 0.7s ease forwards;
+}
+
+@keyframes pageEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes navSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes sectionReveal {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cardReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
 /* Modifiers applied by JavaScript to prevent edge clipping */
