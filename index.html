@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-bar">
+            <div>
+                <h1>Quem está assistindo?</h1>
+                <p>Selecione um dos perfis abaixo para continuar.</p>
+            </div>
+            <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Alternar entre modo claro e escuro">
+                Modo claro
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        <nav class="profile-menu" aria-label="Menu de perfis">
+            <ul>
+                <li>
+                    <a href="catalogo/catalogo.html" class="profile-card" data-name="Kevin" data-image="assets/image1.png">
+                        <figure>
+                            <img src="assets/image1.png" alt="Foto de perfil de Kevin" class="profile-card__image">
+                            <figcaption>
+                                <strong>Kevin</strong>
+                                <span>Designer</span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="catalogo/catalogo.html" class="profile-card" data-name="Bruno" data-image="assets/image2.png">
+                        <figure>
+                            <img src="assets/image2.png" alt="Foto de perfil de Bruno" class="profile-card__image">
+                            <figcaption>
+                                <strong>Bruno</strong>
+                                <span>Programador</span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="catalogo/catalogo.html" class="profile-card" data-name="Família" data-image="assets/image3.png">
+                        <figure>
+                            <img src="assets/image3.png" alt="Foto de perfil de Família" class="profile-card__image">
+                            <figcaption>
+                                <strong>Família</strong>
+                                <span>Conta Colectiva</span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="catalogo/catalogo.html" class="profile-card" data-name="Danilo" data-image="assets/image4.png">
+                        <figure>
+                            <img src="assets/image4.png" alt="Foto de perfil de Danilo" class="profile-card__image">
+                            <figcaption>
+                                <strong>Danilo</strong>
+                                <span>Estudante</span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Bem vindo a Netflix! A alegria de assistir seus filmes e séries favoritos.</p>
+        </div>
+    </footer>
+</body>
+</html>
